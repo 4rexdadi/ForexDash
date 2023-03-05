@@ -1,0 +1,31 @@
+// theme colors
+$primary: #fff !default;
+$secondary: #fff !default;
+$font-color: #fff;
+$headline: #fff;
+$btn-text: #fff;
+$main: #fff;
+$tertiary: #fff;
+$stroke: #fff;
+$primary-opposite: #fff;
+$primary-light: #fff;
+$form-color: #fff;
+
+// spacing
+$base-padding: 1.2rem !default;
+$base-margin: 0.75rem !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3) !default;
+
+// font sizes
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
+
+//........font-sizes........
+$font-md: 1.125rem; //18px
+$font-sm: 0.875rem; //14px
+$font-lg: 2.5rem; //40px

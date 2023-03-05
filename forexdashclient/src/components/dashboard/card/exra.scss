@@ -1,0 +1,63 @@
+@use "../../../util" as *;
+@use "../../../globals" as *;
+
+.extraBox {
+	padding: 20px;
+	margin-top: 10px;
+	text-align: center;
+
+	&__gains {
+		display: flex;
+		gap: 15px;
+
+		&__total {
+			display: flex;
+			gap: 20px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.CircularProgressbar-trail {
+				display: none !important;
+			}
+
+			.CircularProgressbar {
+				width: 60%;
+				height: 60%;
+			}
+		}
+
+		&__abs {
+			display: flex;
+			gap: 20px;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.CircularProgressbar-trail {
+				display: none !important;
+			}
+
+			.CircularProgressbar {
+				width: 60%;
+				height: 60%;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+
+		div {
+			margin-top: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+@use "../../../util" as *;
+@use "../../../globals" as *;
+
+.dashboardTable {
+	overflow: auto;
+
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+
+	&::-webkit-scrollbar {
+		display: none; /* Safari and Chrome */
+	}
+
+	&__tittle {
+		width: 100%;
+		height: 40px;
+		margin: 20px 0 25px 0;
+
+		@include breakpoint-d("1010px") {
+			height: 20px;
+		}
+
+		h3 {
+			font-size: clamp(rem(20), 3vw, rem(29));
+			font-weight: 500;
+
+			position: absolute;
+		}
+	}
+
+	&__head {
+		font-weight: 700 !important;
+	}
+
+	&__body {
+		border-radius: 15px !important;
+	}
+}

@@ -1,0 +1,86 @@
+@use "../../../util" as *;
+@use "../../../globals" as *;
+
+.liveAnalytics {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+	&__tab {
+		font-weight: 400 !important;
+		font-family: $base-font !important;
+		color: inherit !important;
+		text-transform: capitalize !important;
+		font-size: clamp(rem(16), 0.2vw, rem(22)) !important;
+		line-height: 22px !important;
+		overflow: auto !important;
+
+		transition: all 250ms ease !important;
+
+		&:hover {
+			color: var(--pink) !important;
+		}
+	}
+
+	.MuiTabs-indicator {
+		background: var(--font-color) !important;
+		height: 3px !important;
+	}
+
+	.MuiTabs-scroller {
+		max-width: 100vw !important;
+	}
+
+	.liveChart {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&__chart {
+			margin-top: 7px;
+			width: 100%;
+			height: 98.5%;
+			border-radius: 15px;
+			border: 2px solid black;
+			box-sizing: border-box;
+		}
+	}
+
+	.currencyCrosses {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&__crosses {
+			margin-top: 7px;
+			width: 100%;
+			height: 98.5%;
+			border-radius: 15px;
+		}
+	}
+	.topCryptocurrencies {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&__crypto {
+			margin-top: 7px;
+			width: 100%;
+			height: 98.5%;
+			border-radius: 15px;
+		}
+	}
+}

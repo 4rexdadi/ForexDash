@@ -1,0 +1,349 @@
+@use "../../util/" as *;
+@use "../../globals" as *;
+
+.loginPage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: rem(1000);
+	max-height: rem(700);
+	gap: 20px;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	color: #fff;
+
+	@include breakpoint-d("1050px") {
+		margin-inline: 20px;
+	}
+
+	@include breakpoint-d("489px") {
+		display: flex;
+		flex-direction: column-reverse;
+		max-height: unset;
+	}
+
+	&__input {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.input {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&__title {
+				font-size: clamp(1.375rem, 4vw, 1.975rem);
+				color: #03e9f4;
+
+				@include breakpoint-hight("760px") {
+					display: none;
+				}
+			}
+
+			.login-box {
+				margin-top: 40px;
+
+				&__form {
+					label {
+						color: #03e9f4;
+					}
+
+					input {
+						width: 100%;
+						padding: 10px 0;
+						font-size: 16px;
+						color: #fff;
+						margin-bottom: 30px;
+						border: none;
+						border-bottom: 1px solid #03e9f4;
+						outline: none;
+						background: transparent;
+					}
+				}
+			}
+
+			.MuiFormControl-root {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				justify-content: center !important;
+
+				.MuiFormLabel-root {
+					color: #03e9f4 !important;
+					margin-bottom: 30px !important;
+				}
+
+				label {
+					margin: 0 0 10px 0 !important;
+				}
+
+				.css-hyxlzm {
+					color: #fff !important;
+
+					svg {
+						fill: #03e9f4 !important;
+					}
+				}
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		// @include breakpoint-hight("760px") {
+		// 	height: 200px;
+		// }
+
+		&__icon {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			@include breakpoint-hight("700px") {
+				display: none;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__instruction {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h3 {
+				color: #03e9f4;
+				margin: 10px 0;
+			}
+
+			.details {
+				font-size: clamp(rem(12), 0.8vw, rem(15));
+				line-height: 1.9;
+				text-align: center;
+
+				p {
+					margin-bottom: 15px;
+
+					span {
+						color: #03e9f4;
+					}
+				}
+
+				a {
+					border-bottom: 1px solid #03e9f4;
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						width: 100%;
+						left: 0;
+						bottom: -4px;
+						height: 1px;
+						z-index: 1;
+						transition: all 250ms ease;
+					}
+
+					&:hover {
+						&::after {
+							background: #03e9f4;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.btn {
+	p {
+		position: relative;
+		display: inline-block;
+		padding: 10px 20px;
+		color: #03e9f4;
+		font-size: 16px;
+		text-decoration: none;
+		text-transform: uppercase;
+		overflow: hidden;
+		transition: 0.5s;
+		margin-top: 40px;
+		letter-spacing: 4px;
+	}
+
+	p:hover {
+		background: #03e8f484;
+		color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+			0 0 100px #03e9f4;
+	}
+
+	span {
+		position: absolute;
+		display: block;
+	}
+
+	span:nth-child(1) {
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, #03e9f4);
+		animation: btn-anim1 1s linear infinite;
+	}
+
+	@keyframes btn-anim1 {
+		0% {
+			left: -100%;
+		}
+		50%,
+		100% {
+			left: 100%;
+		}
+	}
+
+	span:nth-child(2) {
+		top: -100%;
+		right: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(180deg, transparent, #03e9f4);
+		animation: btn-anim2 1s linear infinite;
+		animation-delay: 0.25s;
+	}
+
+	@keyframes btn-anim2 {
+		0% {
+			top: -100%;
+		}
+		50%,
+		100% {
+			top: 100%;
+		}
+	}
+
+	span:nth-child(3) {
+		bottom: 0;
+		right: -100%;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(270deg, transparent, #03e9f4);
+		animation: btn-anim3 1s linear infinite;
+		animation-delay: 0.5s;
+	}
+
+	@keyframes btn-anim3 {
+		0% {
+			right: -100%;
+		}
+		50%,
+		100% {
+			right: 100%;
+		}
+	}
+
+	span:nth-child(4) {
+		bottom: -100%;
+		left: 0;
+		width: 2px;
+		height: 100%;
+		background: linear-gradient(360deg, transparent, #03e9f4);
+		animation: btn-anim4 1s linear infinite;
+		animation-delay: 0.75s;
+	}
+
+	@keyframes btn-anim4 {
+		0% {
+			bottom: -100%;
+		}
+		50%,
+		100% {
+			bottom: 100%;
+		}
+	}
+}
+
+/* bouncing balls loader/ error */
+
+.loading_error {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.error__message {
+		display: flex;
+		width: 100%;
+		gap: 7px;
+
+		p {
+			font-size: clamp(rem(11), .8vw, rem(14));
+			line-height: 1.8;
+		}
+	}
+
+	.bouncer {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		width: 100px;
+		height: 120px;
+
+		// @include breakpoint-d("490px") {
+		// 	height: 80vh;
+		// 	position: absolute;
+		// }
+	}
+	.bouncer div {
+		width: 20px;
+		height: 20px;
+		background: #03e9f4;
+		border-radius: 50%;
+		animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite
+			alternate;
+	}
+	.bouncer div:nth-child(2) {
+		animation-delay: 0.1s;
+		opacity: 0.8;
+	}
+	.bouncer div:nth-child(3) {
+		animation-delay: 0.2s;
+		opacity: 0.6;
+	}
+	.bouncer div:nth-child(4) {
+		animation-delay: 0.3s;
+		opacity: 0.4;
+	}
+}
+
+@keyframes bouncer {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-100px);
+	}
+}
+
+.displayNone {
+	@include breakpoint-hight("600px") {
+		display: none !important;
+	}
+
+	@include breakpoint-d("490px") {
+		display: none !important;
+	}
+}

@@ -1,0 +1,116 @@
+@use "../../../util" as *;
+@use "../../../globals" as *;
+
+.toolBox {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	padding: 20px;
+	align-items: center;
+	justify-content: center;
+
+	&__box {
+		width: 50%;
+		height: 18%;
+	}
+
+	button {
+		width: 100%;
+		height: 100%;
+		color: var(--font-color);
+		transition: box-shadow 250 ease;
+
+		&:hover {
+			box-shadow: $base-box-shadow;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		padding: 15px;
+
+		&__icon {
+			width: 100%;
+			height: 100%;
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__tittle {
+			flex: 6;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__calender {
+		width: rem(640);
+		height: rem(737);
+		// display: none;
+
+		.calender {
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+		}
+	}
+
+	&__currencyConverter {
+		width: rem(450);
+		height: rem(440);
+
+		.currencyConverter {
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+		}
+	}
+
+	&__pipCalculator {
+		width: rem(555);
+		height: rem(737);
+		// display: none;
+
+		.pipCalculator {
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+		}
+	}
+
+	&__technicalSummary {
+		width: rem(317);
+		height: rem(467);
+		// display: none;
+
+		.technicalSummary {
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+		}
+	}
+}
+
+.MuiBox-root {
+	width: unset !important;
+	height: unset !important;
+	padding: 0 !important;
+	border-radius: 15px !important;
+}

@@ -1,0 +1,36 @@
+@use "../../util/" as *;
+@use "../../globals" as *;
+
+.menu {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	@include breakpoint("600.1px") {
+		display: none;
+	}
+
+	&__icon {
+		width: 35px;
+		height: 35px;
+		margin-left: 15px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			opacity: 0.6;
+
+			transition: all 250ms ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.01);
+				opacity: 1;
+			}
+		}
+	}
+}

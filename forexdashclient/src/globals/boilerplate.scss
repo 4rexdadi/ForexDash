@@ -1,0 +1,73 @@
+@use "../util" as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	color: inherit;
+	margin: 0;
+}
+
+#root,
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+	min-height: 100vh;
+}
+
+.hideOverflow {
+	overflow: hidden;
+}
+
+ul,
+ol {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li,
+button {
+	cursor: pointer;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.1;
+}
+
+/* make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}

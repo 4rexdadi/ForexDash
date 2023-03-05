@@ -1,0 +1,49 @@
+@use "../util" as *;
+@use "variables" as *;
+@use "fonts" as *;
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	background: var(--gradient);
+	font-family: $base-font;
+	color: var(--font-color);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 12% auto 20%;
+	gap: 25px;
+	width: 97%;
+	height: 97%;
+	padding: rem(12);
+	border-radius: 20px;
+	backdrop-filter: blur(5px);
+	background: var(--glass);
+	box-shadow: $base-box-shadow;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+
+	@include breakpoint-d("1300px") {
+		grid-template-columns: minmax(20px, 3%) auto 23%;
+	}
+
+	@include breakpoint-d("1010px") {
+		grid-template-columns: minmax(20px, 3%) auto 10px;
+	}
+
+	@include breakpoint-d("600px") {
+		grid-template-columns: 1fr;
+	}
+}
+
+.displayHide {
+	@include breakpoint-d("600px") {
+		display: none !important;
+	}
+}
